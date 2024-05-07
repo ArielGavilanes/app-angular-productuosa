@@ -1,2 +1,25 @@
-<p>shared works!</p>
-<button pButton pRipple label="Submit" class="p-button-success"></button>
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+
+        <p-image src="../../assets/logo/logo.jpg" alt="Image" width="100" />
+
+    </ng-template>
+    <ng-template pTemplate="item" let-item let-root="root">
+        <a pRipple class="flex align-items-center p-menuitem-link">
+            <span [class]="item.icon"></span>
+            <span class="ml-2">{{ item.label }}</span>
+            <i *ngIf="item.items"
+                [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']">{{item.items}}</i>
+        </a>
+    </ng-template>
+    <ng-template pTemplate="end">
+
+        <div class="flex align-items-center gap-2">
+            <input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto" />
+
+            <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle"
+                styleClass="mr-2" size="large" />
+        </div>
+        
+    </ng-template>
+</p-menubar>

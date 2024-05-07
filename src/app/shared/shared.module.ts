@@ -4,6 +4,11 @@ import { SharedComponent } from './shared.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
+import { MenubarModule } from 'primeng/menubar';
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 @NgModule({
@@ -14,7 +19,13 @@ import { ButtonModule } from 'primeng/button';
   ],
   imports: [
     CommonModule,
-    ButtonModule
+    AvatarModule,
+    AvatarGroupModule,
+    ButtonModule,
+    MenubarModule,
+    InputTextModule
   ]
 })
-export class SharedModule { }
+export class SharedModule { 
+
+}
