@@ -1,20 +1,78 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Lista de Productos</h2>
-        <ul class="list-group">
-          <li *ngFor="let product of products" class="list-group-item">
-            {{ product.name }} - ${{ product.price }}
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-body">
-           
-          </div>
+<div class="p-grid p-nogutter">
+    <div class="card">
+        <div class="card-body table-striped-columns"> 
+          <h2 class="card-title">Lista de Productos</h2>
+          <table class="table table-striped table-bordered table-thin-border">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products" (click)="selectProduct(product)">
+                <td>{{ product.name }}</td>
+                <td>${{ product.price }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </div>
-  </div>
+      </div>      
+      <div class="p-col-12 p-md-8" style="margin: 20px;">
+        <div class="p-card-body">
+            <h2 class="card-title">Detalles de Productos</h2>
+            <div *ngIf="selectedProduct" class="p-grid">
+                <div class="p-col-12">
+                    <div class="product-details p-grid">
+                        <div class="p-col-12 p-md-4">
+                            <h3>{{ selectedProduct.name }}</h3>
+                            <img [src]="selectedProduct.imageUrl" alt="{{ selectedProduct.name }}" class="product-image">
+                        </div>
+                        <div class="p-col-12 p-md-8">
+                            <p class="product-description">{{ selectedProduct.description }}</p>
+                            <p class="product-price">Precio: ${{ selectedProduct.price }}</p>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="product-table">
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Valor</th>
+                            </tr>
+                            <tr>
+                                <td>Nombre</td>
+                                <td>{{ selectedProduct.name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Precio</td>
+                                <td>${{ selectedProduct.price }}</td>
+                            </tr>
+                            <tr>
+                                <td>Imagen</td>
+                                <td><img [src]="selectedProduct.imageUrl" alt="{{ selectedProduct.name }}" class="table-image" style="border-radius: 10px;"></td>
+                            </tr>
+                            <tr>
+                                <td>Pantalla</td>
+                                <td>{{ selectedProduct.screen }}</td>
+                            </tr>
+                            <tr>
+                                <td>Procesador</td>
+                                <td>{{ selectedProduct.processor }}</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>{{ selectedProduct.ram }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!selectedProduct" class="p-grid">
+                <div class="p-col-12">
+                    <p>Selecciona un producto para ver detalles.</p>
+                </div>
+            </div>
+        </div>
+    </div>     
+ </div>
   
