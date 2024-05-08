@@ -8,7 +8,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { InputTextModule } from 'primeng/inputtext';
-import { DropdownModule } from 'primeng/dropdown';
+import { ImageModule } from 'primeng/image';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,11 @@ import { DropdownModule } from 'primeng/dropdown';
     AvatarGroupModule,
     ButtonModule,
     MenubarModule,
-    InputTextModule
+    InputTextModule,
+    ImageModule
+  ] ,
+  exports: [
+    SharedComponent
   ]
 })
 export class SharedModule { }

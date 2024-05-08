@@ -16,17 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    SharedComponent,
   ],
   imports: [
-    BrowserModule,
-    ButtonModule,
-    MenubarModule,
-    AvatarModule,
-    AvatarGroupModule,
-    InputTextModule,
-    DropdownModule,
-    ImageModule,
     ProductsModule,
     AppRoutingModule
   ],
