@@ -1,1 +1,70 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.table-thin-border th,
+.table-thin-border td {
+  border-width: 1px; 
+}
+
+.table-thin-border th,
+.table-thin-border td,
+.table-thin-border thead th,
+.table-thin-border tbody + tbody {
+  border-color: #dee2e6;
+}
+
+.table-thin-border thead th,
+.table-thin-border thead td {
+  border-bottom-width: 2px; 
+}
+
+.product:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo según tu preferencia */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Cambia los valores según desees */
+  }
+  
+
+.product-details {
+    margin-bottom: 20px;
+  }
+  
+  .product-details h3 {
+    margin-top: 0;
+  }
+  
+  .product-image {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .product-description {
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-weight: bold;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .product-table th, .product-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .product-table th {
+    text-align: left;
+    background-color: #f2f2f2;
+  }
+  
+  .table-image {
+    max-width: 100px;
+  }
+  
