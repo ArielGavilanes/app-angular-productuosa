@@ -4,6 +4,7 @@ import { FotoPerfilComponent } from './foto-perfil/foto-perfil.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { UsersComponent } from './users.component';
 import { UsersRoutingModule } from './users-routing.module';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { UsersRoutingModule } from './users-routing.module';
   ],
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    CarouselModule
   ],
   exports: [
     FotoPerfilComponent,
