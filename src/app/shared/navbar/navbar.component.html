@@ -1,0 +1,24 @@
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+
+        <p-image src="../../assets/logo/logo.jpg" alt="Image" width="100" />
+
+    </ng-template>
+    <ng-template pTemplate="item" let-item let-root="root">
+        <div pRipple class="flex align-items-center p-menuitem-link" (click)="navigate(item.ruta)">
+            <span [class]="item.icon"></span>
+            <span class="ml-2">{{ item.label }}</span>
+            <i *ngIf="item.items"
+                [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']">{{item.items}}</i>
+        </div>
+    </ng-template>
+
+
+    <ng-template pTemplate="end">
+
+        <div class="flex align-items-center gap-2">
+            <a [routerLink]="'/user'"> <p-avatar [image]="imagenUrl" shape="circle" styleClass="mr-2" size="xlarge" > </p-avatar></a>
+        </div>
+
+    </ng-template>
+</p-menubar>

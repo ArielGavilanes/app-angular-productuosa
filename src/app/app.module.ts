@@ -9,11 +9,20 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { ImageModule } from 'primeng/image';
+import { FooterComponent } from './shared/footer/footer.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { PruebaComponent } from './prueba/prueba.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SharedComponent
+    SharedComponent,
+    FooterComponent,
+    NavbarComponent,
+    PruebaComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -23,7 +32,8 @@ import { ImageModule } from 'primeng/image';
     AvatarGroupModule,
     InputTextModule,
     DropdownModule,
-    ImageModule
+    ImageModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
