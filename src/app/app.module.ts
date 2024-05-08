@@ -9,11 +9,13 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { ImageModule } from 'primeng/image';
+import { ProductsModule } from './products/products.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SharedComponent
+    SharedComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { ImageModule } from 'primeng/image';
     AvatarGroupModule,
     InputTextModule,
     DropdownModule,
-    ImageModule
+    ImageModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
