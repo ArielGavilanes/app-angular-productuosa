@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { UsersRoutingModule } from './users-routing.module';
-
+import { FotoPerfilComponent } from './foto-perfil/foto-perfil.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    FotoPerfilComponent,
+    PerfilComponent
+  ],
   imports: [
-    CommonModule,
-    UsersRoutingModule
+    CommonModule
+  ],
+  exports: [
+    FotoPerfilComponent,
+    PerfilComponent 
   ]
 })
 export class UsersModule { }

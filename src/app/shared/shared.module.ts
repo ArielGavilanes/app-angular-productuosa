@@ -10,15 +10,14 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 
-
 @NgModule({
   declarations: [
-    SharedComponent,
-    BrowserModule,
-    BrowserAnimationsModule
+    SharedComponent
   ],
   imports: [
     CommonModule,
+    BrowserModule, 
+    BrowserAnimationsModule, 
     AvatarModule,
     AvatarGroupModule,
     ButtonModule,
@@ -26,6 +25,4 @@ import { DropdownModule } from 'primeng/dropdown';
     InputTextModule
   ]
 })
-export class SharedModule { 
-
-}
+export class SharedModule { }
