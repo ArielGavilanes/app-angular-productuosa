@@ -10,14 +10,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let product of products" (click)="selectProduct(product)">
+              <tr *ngFor="let product of products" (click)="selectProduct(product)" class="product">
                 <td>{{ product.name }}</td>
                 <td>${{ product.price }}</td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>      
+      </div>
+      
+          
       <div class="p-col-12 p-md-8" style="margin: 20px;">
         <div class="p-card-body">
             <h2 class="card-title">Detalles de Productos</h2>
