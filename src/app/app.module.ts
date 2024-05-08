@@ -12,6 +12,7 @@ import { ImageModule } from 'primeng/image';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PruebaComponent } from './prueba/prueba.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -33,7 +34,8 @@ import { PruebaComponent } from './prueba/prueba.component';
     InputTextModule,
     DropdownModule,
     ImageModule,
-
+    RouterModule.forRoot([
+      { path: 'prueba', component: PruebaComponent },])
   ],
   providers: [],
   bootstrap: [AppComponent]

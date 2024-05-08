@@ -1,4 +1,3 @@
-import { style } from '@angular/animations';
 import { Component, Input } from '@angular/core';
 import { PrimeIcons, MenuItem } from 'primeng/api';
 import { Router } from '@angular/router';
@@ -14,7 +13,6 @@ export class NavbarComponent {
   constructor(private router: Router) {
     this.items = [];
     this.imagenUrl = 'https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png';
-
   }
 
   ngOnInit() {
